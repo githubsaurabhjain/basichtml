@@ -1,0 +1,140 @@
+.add {
+    background-color: whitesmoke;
+}
+.tab {
+    width: 100%;
+}
+.name {
+    width: 200px;
+}
+.blk {
+    width: 20px;
+}
+.pro-name {
+    width: 100px;
+}
+.no-p {
+    margin-top: 10px;
+}
+.med {
+    height: 200px;
+    background: #cccccc;
+}
+.prd {
+    width: 40px;
+}
+
+.no-product {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: #cccccc;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid black;
+}
+.price {
+    width: 50px;
+    margin-left: auto;
+    padding-right: 28px;
+}
+.controls-wrapper{
+    justify-content: space-between;
+    display: flex;
+}
+.final-price {
+    margin-left: auto;
+}
+.quant {
+    width: 50px;
+    margin-left: auto;
+}
+.total {
+    width: 150px;
+}
+
+.minus {
+    border-radius: 0.2em 0 0 0.2em;
+}
+.plus {
+    border-radius: 0 0.2em 0.2em 0;
+}
+.vat {
+    background-color: whitesmoke;
+}
+.dis {
+    background-color: whitesmoke;
+}
+
+.tot {
+    background-color: whitesmoke;
+}
+
+.total-t {
+    width: 147px;
+    font-weight: 600;
+
+    background: white;
+    color: #cccccc;
+}
+
+.demo {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.button {
+    background-color: rgb(209, 80, 80);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.button-process {
+    background-color: rgb(184, 228, 65);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 20px;
+}
+.btn-div-section {
+    margin-top: 30px;
+    display: flex;
+}
+.total-quant {
+    float: right;
+}
+.right-wrapper {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.total-amt {
+    float: left;
+}
+
+.pr-btn {
+    margin-left: auto;
+    color: black;
+    padding-right: 10px;
+    text-align: center;
+}
+.cancel-btn {
+    text-align: center;
+    color: black;
+}
+.calc{
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="header">
+        Receipt
+    </div>
+    <div>
+        <div style="text-align: center;">Sale Number 2929</div>
+        <div>Date:</div>
+        <div>
+            <table class="tab-details">
+                <th class="num">#</th>
+                <th class="name">Products</th>
+                <th class="quant">Quantity</th>
+                <th class="total">Sub Total</th>
+
+                <tr *ngFor="let details of Products; let i=index">
+                    <td class="num">{{i+1}}</td>
+                    <td class="name">{{details.name}}</td>
+                    <td class="quant">{{details.quantity}}</td>
+                    <td class="total">{{details.quantity*details.price}}</td>
+                </tr>
+            </table>
+            <div class="calc">
+                <div>Total Items</div>
+                <div>{{totalQuantity}}</div>
+                <div>{{subTotal}}</div><br>
+
+
+            </div>
+            <div class="calc">
+                <div>&nbsp;</div>
+                <div>Discount</div>
+                <div>{{discount}}%</div>
+            </div>
+            <div class="calc">
+                <div>&nbsp;</div>
+
+                <div>Vat</div>
+                <div>{{vat}}%</div>
+            </div>
+        </div>
+        <button class="btn btn-primary min-width" (click)="close()">CLOSE
+        </button>
+    </div>
+
+
+
+
+</div>

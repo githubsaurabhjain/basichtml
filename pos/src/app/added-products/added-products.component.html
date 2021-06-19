@@ -1,0 +1,82 @@
+<div class="add">
+    <div>
+        <table>
+            <div class="tab">
+                <th class="name"><span>PRODUCTS</span></th>
+                <th class="price"><span>PRICE</span></th>
+                <th class="blk"></th>
+
+                <th class="quant"><span>QUANTITY</span></th>
+                <th class="total"><span>TOTAL</span></th>
+            </div>
+            <br>
+            <div class="no-product" *ngIf="Products.length==0">
+                <h3 class="no-p">THERE ARE NO PRODUCTS</h3>
+            </div>
+            <div class="med" *ngIf="Products">
+                <tbody>
+                    <tr *ngFor="let product of Products">
+                        <td>
+                            <button (click)="remove(product)">remove</button></td>
+                        <td class="pro-name">{{product.name}}</td>
+                        <td class="blk"></td>
+                        <td class="price prd">{{product.price}}</td>
+                        <td class="quant">
+                            <div class="controls-wrapper" >
+                                <button style="width: 26px; height: 20px; border: 1px solid black;cursor: pointer; font-size: 14px;"
+                                    href="#" (click)="decreaseQuantity(product)" class="minus">-</button>
+                                <input disabled  style="width: 105px;" type="number" #quant [value]="product.quantity" size="1">
+                                <button style="width: 26px; height: 20px; border: 1px solid black;cursor: pointer; font-size: 14px;"
+                                    (click)="increaseQuantity(product)" class="plus">+</button>
+                            </div>
+                        </td>
+                        <td class="final-price">{{quant.value*product.price}}</td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+    </div>
+    <div class="calc">
+        <div class="demo">
+            <div class="total-t"><span>Sub Total</span></div>
+            <div class="right-wrapper">
+                <span class="sub-calc sub-total-amount">{{subTotal||0}}
+                    EUR</span>
+                <span class="total-quant">{{totalQuantity||0}}items</span></div>
+        </div>
+        <div class="demo">
+            <div class="total-t"><span>Vat Tax</span></div>
+            <div class="right-wrapper"><span class="sub-calc"><input placeholder="%"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" #vat (input)="vatTax()"
+                        type="text" min="0" max="100" value="N/A" size="4">%</span><span
+                    class="total-quant">{{vatAmount||0}}
+                    EUR</span></div>
+        </div>
+        <div class="demo">
+            <div class="total-t"><span>Discount</span></div>
+            <div class="right-wrapper">
+                <span class="sub-calc"><input (input)="vatTax()"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="%" #discount
+                        type="text" value="N/A" size="4">%</span><span class="total-quant">{{discountAmount||0}}
+                    EUR</span>
+            </div>
+        </div>
+        <div class="demo">
+            <div class="total-t"><span>Total</span></div>
+            <div class="right-wrapper"><span class="total-amt">{{totalAmount||0.00}}
+                    EUR</span><span class="total-quant">&nbsp;</span></div>
+        </div>
+    </div>
+
+    <div class="btn-div-section">
+        <button class="button cancel-btn" tabindex="8" (click)="cancelSale()">
+            Cancel Sale
+        </button>
+        <button class="button-process pr-btn" (click)="processSale()" type="submit">
+            Process Sale
+        </button>
+
+    </div>
+
+
+</div>

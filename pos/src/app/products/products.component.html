@@ -1,0 +1,30 @@
+<div class="products-wrapper">
+    <div class="list" *ngFor="let product of products;let i=index">
+
+        <div *ngIf="product.image">
+            <div class="container">
+                <img class="card-img" src="./assets/images/{{product.image}}" [alt]="product.name">
+                <span class="prd-name">{{product?.name}}</span>
+
+                <div (click)="addToList(product)" (mouseenter)="changeText(1)" (mouseleave)="changeText(0)"
+                    class="overlay">
+                    <div class="text"><span>{{product.description||'N/A'}},</span><span>{{product.price}}</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div *ngIf="!product.image">
+            <div class="container">
+                <div class="card-img"></div>
+                <span class="prd-name">{{product?.name}}</span>
+                <div (click)="addToList(product)" (mouseenter)="changeText(1)" (mouseleave)="changeText(0)"
+                    class="overlay">
+                    <div class="text"><span>{{product.description||'N/A'}},</span><span>{{product.price}}</span></div>
+                </div>
+            </div>
+
+        </div>
+<br><br>
+    </div>
+</div>

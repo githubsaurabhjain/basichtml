@@ -1,0 +1,26 @@
+.num {
+    width: 30px;
+}
+.name {
+    width: 30px;
+}
+.header{
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+
+}
+.quant {
+    width: 30px;
+}
+.tab-details {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.calc {
+    display: flex;
+    width: 100%;
+    border: 1px #ccc;
+    justify-content: space-between;
+}

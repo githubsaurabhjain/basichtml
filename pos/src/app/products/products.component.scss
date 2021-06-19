@@ -1,0 +1,81 @@
+.card {
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+}
+.card img {
+    align-content: center;
+    background-size: contain;
+}
+
+.list {
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+.card-img {
+    width: 150px;
+    max-width: 150px;
+    height: 120px;
+    border-radius: 4px;
+    text-align: center;
+}
+.sepration{
+    width: 10px;
+}
+.products-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+    width: 145px;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    cursor: pointer;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.container:hover .overlay {
+    opacity: 0.6;
+}
+
+.prd-name{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin:0 auto;
+}
